@@ -14,7 +14,7 @@ This project is a responsive web page that showcases an NFT preview card compone
 
 ## Demo
 
-You can view a live demo of the project [here](#) (Provide a link to your live demo if available).
+You can view a live demo of the project [here](https://a7medc7.github.io/nft-preview-card-component/).
 
 ## Features
 
