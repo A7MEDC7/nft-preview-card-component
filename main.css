@@ -1,0 +1,195 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Colors */
+:root {
+  /* Primary */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Cyan-2: hsl(178, 100%, 50%, 60%);
+  /* Neutral */
+  --Very-dark-blue-1: hsl(217, 54%, 11%);
+  --Very-dark-blue-2: hsl(216, 50%, 16%);
+  --Very-dark-blue-3: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--Very-dark-blue-1);
+  width: 100%;
+  height: 100vh;
+  color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  background-color: var(--Very-dark-blue-2);
+  border-radius: 15px;
+  width: 275px;
+  padding: 1.5rem;
+}
+
+.image {
+  position: relative;
+}
+
+.image div {
+  position: absolute;
+  background-color: var(--Cyan-2);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.image div:hover {
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.image div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.description {
+  margin: 0.6rem 0 1rem 0;
+  color: var(--Soft-blue);
+  line-height: 28px;
+  font-weight: 300;
+}
+
+.price-day {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--Soft-blue);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  color: var(--Cyan);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.price img {
+  margin-right: 5px;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  color: var(--Soft-blue);
+  font-size: 14px;
+}
+
+.day img {
+  margin-right: 5px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: var(--Soft-blue);
+}
+
+.avatar {
+  border: 1px solid var(--White);
+  border-radius: 50px;
+  margin-right: 1rem;
+  width: 30px;
+}
+
+span {
+  color: var(--White);
+  margin-left: 5px;
+}
+
+.main-img,
+h3,
+span {
+  cursor: pointer;
+}
+
+h3:hover,
+span:hover {
+  color: var(--Cyan);
+}
+
+/* Footer */
+.attribution {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(22, 17, 17);
+  color: white;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+a:hover {
+  color: var(--Cyan);
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 100%; /* Make the card full width on small screens */
+  }
+
+  .image div {
+    opacity: 1; /* Make the hover effect always visible on small screens */
+  }
+
+  .price-day {
+    flex-direction: column; /* Stack price and day vertically */
+    align-items: center; /* Center them */
+    text-align: center; /* Center text */
+    border-bottom: none; /* Remove border */
+    padding-bottom: 0; /* Remove padding */
+    margin-bottom: 0; /* Remove margin */
+  }
+
+  .price,
+  .day {
+    margin-bottom: 0.5rem; /* Add some spacing between price and day */
+  }
+
+  .avatar {
+    width: 20px; /* Reduce avatar size */
+  }
+  .attribution {
+    padding: 1rem;
+  }
+}
